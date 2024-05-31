@@ -1,0 +1,35 @@
+# Description: Configuration file for the Regularised Evolution strategy on the AddNIST dataset.
+seed: 0
+
+dataset: "cifar100"
+load_in_gpu: False
+num_classes: 100
+channels: 3
+image_size:
+  - 32
+  - 32
+input_mode: "im"
+
+score: "xe"
+epochs: 25
+patience: 25
+test_epochs: 200
+batch_size: 128
+hpo_runs: 1
+lr: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+
+search_space_computation_module_prob: 0.32
+search_space_min_module_depth: 0
+search_space_max_module_depth: 100
+search_space_num_repeated_cells: 1
+
+search_strategy: "re"
+search_strategy_num_samples: 1000
+search_strategy_init_pop_size: 100
+search_strategy_sample_size: 10
+search_strategy_architecture_seed: "wideresnet16_4"
+search_strategy_continue_search: True
+
+log: False

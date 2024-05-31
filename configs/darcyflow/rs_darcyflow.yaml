@@ -1,0 +1,40 @@
+# Description: Configuration file for the Regularised Evolution strategy on the AddNIST dataset.
+seed: 0
+
+dataset: "darcyflow"
+load_in_gpu: False
+num_classes:
+  - 85
+  - 85
+channels: 1
+image_size:
+  - 85
+  - 85
+input_mode: "im"
+train_mode:
+  - "trainval"
+  - "test"
+
+score: "relative_l2"
+epochs: 25
+patience: 25
+test_epochs: 200
+batch_size: 4
+hpo_runs: 1
+lr: 0.001
+momentum: 0.9
+weight_decay: 0.0005
+
+search_space_computation_module_prob: 0.32
+search_space_min_module_depth: 0
+search_space_max_module_depth: 100
+search_space_num_repeated_cells: 1
+
+search_strategy: "re"
+search_strategy_num_samples: 1000
+search_strategy_init_pop_size: 1000
+search_strategy_sample_size: 10
+search_strategy_architecture_seed: None
+search_strategy_continue_search: True
+
+log: False

@@ -1,0 +1,43 @@
+# Deep Learning Frameworks
+torch
+torchvision
+torchaudio
+
+# Torch Extensions
+torchmetrics
+
+# High-level Libraries built on Torch
+accelerate
+transformers
+timm
+
+# Dataset and Model Hub
+datasets
+huggingface_hub
+librosa
+
+# Configuration and Typing
+hydra-zen
+torchtyping
+
+# Experiment Tracking
+wandb
+
+# Console Rich
+rich
+
+# Image Processing
+opencv-python
+
+# Scientific Computing
+scipy
+scikit-learn
+
+# Operations
+einops
+fire
+positional-encodings[pytorch]
+
+# visualisation
+networkx
+pyvis

@@ -1,0 +1,31 @@
+# Requirements
+-r requirements.txt
+
+# extra
+git+https://github.com/SamsungLabs/zero-cost-nas.git
+
+# Testing
+pytest
+pytest-cov
+pytest-mock
+pytest-rich
+pytest-sugar
+pytest-xdist
+
+# Code Formatting
+autoflake
+isort
+black
+
+# Interactive Development Environment
+jupyterlab
+
+# GPU Monitoring
+nvitop
+
+# GitHub CLI
+gh
+
+# Data Visualization
+matplotlib
+seaborn
