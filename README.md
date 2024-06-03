@@ -1,10 +1,11 @@
 # `einspace`: Searching for Neural Architectures from Fundamental Operations
+[[paper]](https://arxiv.org/abs/2405.20838) [[project page]](https://linusericsson.github.io/einspace/)
 
 This is the official codebase for `einspace`, a new expressive search space for neural architecture search.
 
 ![image](figures/baselines_arch_tree.png)
 
-Diverse architectures can be represented in our expressive space. For more info, view our [project page](https://linusericsson.github.io/einspace/).
+Diverse architectures can be represented in our expressive space as shown above for ConvNets, transformers and MLP-only networks.
 
 Follow the instructions below to set up the environment, data, and then run an example script.
 
