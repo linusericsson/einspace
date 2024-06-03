@@ -82,11 +82,12 @@ python einspace/main.py --config configs/language/re_language.yaml --device cuda
 ## Cite us!
 
 ```
-
-@preprint {
-    ericsson_einspace_2024,
-    title = {einspace: Searching for Neural Architectures from Fundamental Operations},
-    author = {Linus Ericsson and Miguel Espinosa Minano and Chenhongyi Yang and Antreas Antoniou and Amos Storkey and Shay B. Cohen and Steven McDonagh and Elliot J. Crowley},
-    year = {2024},
+@article{ericsson2024einspace,
+    title={einspace: Searching for Neural Architectures from Fundamental Operations}, 
+    author={Linus Ericsson and Miguel Espinosa and Chenhongyi Yang and Antreas Antoniou and Amos Storkey and Shay B. Cohen and Steven McDonagh and Elliot J. Crowley},
+    year={2024},
+    eprint={2405.20838},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
 }
 ```
