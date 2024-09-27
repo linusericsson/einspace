@@ -1,5 +1,6 @@
 # `einspace`: Searching for Neural Architectures from Fundamental Operations
-NeurIPS 2024
+Accepted to NeurIPS 2024
+
 [[paper]](https://arxiv.org/abs/2405.20838) [[project page]](https://linusericsson.github.io/einspace/)
 
 This is the official codebase for `einspace`, a new expressive search space for neural architecture search.
