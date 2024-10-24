@@ -2,6 +2,8 @@ from math import floor, log, sqrt
 
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
+
 from einops.layers.torch import Rearrange
 from positional_encodings.torch_encodings import (
     PositionalEncodingPermute1D,
@@ -916,6 +918,178 @@ def linear_x8(**kwargs):
         in_dim=kwargs["input_shape"][-1],
         out_dim=kwargs["input_shape"][-1] * 8,
         **kwargs,
+    )
+
+
+def conv1d1k1s0p32d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=32,
+        kernel_size=1,
+        stride=1,
+        padding=0,
+    )
+
+
+def conv1d1k1s0p64d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=64,
+        kernel_size=1,
+        stride=1,
+        padding=0,
+    )
+
+
+def conv1d1k1s0p128d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=128,
+        kernel_size=1,
+        stride=1,
+        padding=0,
+    )
+
+
+def conv1d1k1s0p256d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=256,
+        kernel_size=1,
+        stride=1,
+        padding=0,
+    )
+
+
+def conv1d3k1s1p32d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=32,
+        kernel_size=3,
+        stride=1,
+        padding=1,
+    )
+
+
+def conv1d3k1s1p64d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=64,
+        kernel_size=3,
+        stride=1,
+        padding=1,
+    )
+
+
+def conv1d3k1s1p128d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=128,
+        kernel_size=3,
+        stride=1,
+        padding=1,
+    )
+
+
+def conv1d3k1s1p256d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=256,
+        kernel_size=3,
+        stride=1,
+        padding=1,
+    )
+
+
+def conv1d5k1s2p32d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=32,
+        kernel_size=5,
+        stride=1,
+        padding=2,
+    )
+
+
+def conv1d5k1s2p64d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=64,
+        kernel_size=5,
+        stride=1,
+        padding=2,
+    )
+
+
+def conv1d5k1s2p128d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=128,
+        kernel_size=5,
+        stride=1,
+        padding=2,
+    )
+
+
+def conv1d5k1s2p256d(**kwargs):
+    return nn.Conv1d(
+        in_channels=kwargs["input_shape"][1],
+        out_channels=256,
+        kernel_size=5,
+        stride=1,
+        padding=2,
+    )
+
+
+def conv1d8k1s3p32d(**kwargs):
+    return nn.Sequential(
+        nn.Lambda(lambda x: F.pad(x, (0, 1))),
+        nn.Conv1d(
+            in_channels=kwargs["input_shape"][1],
+            out_channels=32,
+            kernel_size=8,
+            stride=1,
+            padding=3,
+        )
+    )
+
+
+def conv1d8k1s3p64d(**kwargs):
+    return nn.Sequential(
+        nn.Lambda(lambda x: F.pad(x, (0, 1))),
+        nn.Conv1d(
+            in_channels=kwargs["input_shape"][1],
+            out_channels=64,
+            kernel_size=8,
+            stride=1,
+            padding=3,
+        )
+    )
+
+
+def conv1d8k1s3p128d(**kwargs):
+    return nn.Sequential(
+        nn.Lambda(lambda x: F.pad(x, (0, 1))),
+        nn.Conv1d(
+            in_channels=kwargs["input_shape"][1],
+            out_channels=128,
+            kernel_size=8,
+            stride=1,
+            padding=3,
+        )
+    )
+
+
+def conv1d8k1s3p256d(**kwargs):
+    return nn.Sequential(
+        nn.Lambda(lambda x: F.pad(x, (0, 1))),
+        nn.Conv1d(
+            in_channels=kwargs["input_shape"][1],
+            out_channels=256,
+            kernel_size=8,
+            stride=1,
+            padding=3,
+        )
     )
 
 
