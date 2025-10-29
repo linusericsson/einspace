@@ -13,11 +13,11 @@ def identity(**kwargs):
 
 
 def relu(**kwargs):
-    return nn.LeakyReLU()
+    return nn.ReLU()
 
 
 def leakyrelu(**kwargs):
-    return nn.ReLU()
+    return nn.LeakyReLU()
 
 
 def prelu(**kwargs):
@@ -63,3 +63,4 @@ def abs(**kwargs):
 # global
 def softmax(**kwargs):
     return nn.Softmax(dim=-1)
+
