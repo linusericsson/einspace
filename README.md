@@ -59,13 +59,13 @@ data/
 |--darcyflow
 |   |__piececonst_r421_N1024_smooth1.mat, piececonst_r421_N1024_smooth2.mat
 |--cosmic
-   |--cosmic_test.pt
-   |--cosmic_train.pt
-   |--cosmic_valid.pt
-   |--npy_test  
-   |--npy_train  
-   |--test_dirs.npy  
-   |__train_dirs.npy
+|   |--cosmic_test.pt
+|   |--cosmic_train.pt
+|   |--cosmic_valid.pt
+|   |--npy_test  
+|   |--npy_train  
+|   |--test_dirs.npy  
+|   |__train_dirs.npy
 |_ ...
 ```
 
